@@ -1,0 +1,74 @@
+﻿@model The_Ride_You_Rent.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_Body_Type.BodyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_Body_Type.BodyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car_Make.CarMake)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car_Make.CarMake)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KilometresTravelled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KilometresTravelled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceKilometres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceKilometres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Available)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

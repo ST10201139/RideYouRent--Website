@@ -1,0 +1,72 @@
+﻿@model The_Ride_You_Rent.Models.Return_
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Return_</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.CarNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car.CarNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Driver.DriverName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Driver.DriverName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspector.InspectorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inspector.InspectorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElapsedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElapsedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fine)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
